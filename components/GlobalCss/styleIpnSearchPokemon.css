@@ -1,0 +1,14 @@
+.ipnSearchPokemon {
+  background-image: url("../../image/iconMenu/magnifying_Theme_Glass_Dark.png");
+  background-repeat: no-repeat;
+  padding-left: 2.7rem;
+  width: 90%;
+  /*width: clamp(350px, 80vw, 1600px);*/
+  height: 50px;
+  border-radius: 1.7rem;
+  outline: none;
+  font-size: clamp(.9rem, 1vw, 2rem);
+}
+.ipnSearchPokemon::placeholder{
+    color: var(--black);
+}

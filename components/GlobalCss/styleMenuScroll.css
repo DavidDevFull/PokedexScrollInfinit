@@ -1,0 +1,44 @@
+.styleBodyScroll {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  padding-top: 0.8rem;
+  top: 0;
+}
+.bodyLblInteraction {
+  border-radius: 1.7rem;
+  width: 55px;
+  height: 55px;
+  background: var(--white_Sum_Of_Course);
+  border: solid var(--black_Sum_Of_Course);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.bodyLblInteraction:hover {
+  transition: all 0.2s;
+  left: 0;
+  box-shadow: -0px -0px 15px 0px var(--white_Sum_Of_Course);
+  scale: 1.1;
+}
+
+.bodyLblInteraction:checked {
+  box-shadow: -0px -0px 15px 0px var(--white_Sum_Of_Course);
+  transition: all 0.2s;
+  left: 0;
+  width: 1500px;
+}
+.bodyLblInteraction img {
+  width: 45px;
+}
+
+.bodyLblInteraction input {
+  display: none;
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  overflow: visible;
+}
+*::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+:root {
+  --black: #141313;
+  --black_Sum_Of_Course: #141313;
+
+  --white: #c8c8c8;
+  --white_Sum_Of_Course: #f4f4f4;
+}
+body{
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+#headerSearch,
+#secGlobalElements,
+#sectionContain {
+  width: clamp(250px, 100vw, 1650px);
+  background: var(--black);
+  margin: 0 auto;
+}
+#headerSearch {
+  height: 12dvh;
+  border-radius: 0 0 2.5rem 2.5rem;
+  margin: 0 auto 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#secGlobalElements {
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#secFatherOfDivs {
+  margin: 0 auto;
+  width: clamp(250px, 100vw, 1650px);
+
+}
+#divDetailPokemon, #divComparePokemon, #divSuggestionRandomPokemon{
+  border-radius: 2.5rem;
+  margin: 2% 0;
+}
+#divSuggestionRandomPokemon{
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  overflow: scroll;
+  border-radius: 2.5rem;
+}
