@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
-@import url('../../stylePage.css');
 @import url(styleCardPokemon.css);
 @import url(styleComparePokemon.css);
-@import url(styleFooterMenu.css);
 @import url(styleIpnSearchPokemon.css);
-@import url(styleMenuScroll.css);
+@import url(styleAsideBodyMenuScroll.css);
 @import url(styleSumAboutPokemon.css);
 * {
   padding: 0;
@@ -19,11 +17,11 @@
     background-color: transparent;
 }
 :root {
-  --black: #0c0c0c;
-  --black_Sum_Of_Course: #2d2d2d;
+  --black: #262323;
+  --black_Sum_Of_Course: #454444;
   
-  --white: #ececec;
-  --white_Sum_Of_Course: #f4f4f4;
+  --white: #d7d7d7;
+  --white_Sum_Of_Course: #f9f9f9;
 
   --colorTypeFire:     #EE8130;
   --colorTypeWater:    #6390F0;
@@ -46,14 +44,17 @@ html, body{
     height: 100dvh;
     width: 100%;
 }
-body {
-  background-color: var(--white);
+body{
+  background: var(--black);
   font-family: "Pixelify Sans", sans-serif;
+  transition: .5s;
 }
-#headerSearch, #sectionContain, #footerMen{
+#headerSearch, #secGlobalElements, #footerMenu{
     width: clamp(250px, 100vw, 1650px);
     background: var(--black);
     border: none;
+    transition: .5s;
+    z-index: 0;
 }
 
 #headerSearch {
@@ -64,7 +65,7 @@ body {
   align-items: center;
   height: 12dvh;
 }
-#sectionContain {
+#secGlobalElements {
   border-radius: 2.5rem;
   padding: 1rem;
   display: flex;
@@ -81,6 +82,44 @@ body {
   border-radius: 2.5rem;
 }
 #footerMenu{
-  bottom: 0px;
-  height: 50px;
+  height: 12dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  bottom: 0;
+  border-radius: 2.5rem 2.5rem 0 0;
+  border: solid 2px var(--white);
+  margin: 0 auto;
+  box-shadow: -0px -0px 10px 0px var(--white_Sum_Of_Course);
 }
+body.dark{
+  background: var(--white_Sum_Of_Course);
+  transition: .5s;
+}
+#headerSearch.dark, #secGlobalElements.dark, #footerMenu.dark{
+  background: var(--white);
+  transition: .5s;
+}
+.ipnSearchPokemon.dark{
+  transition: .5s;
+  border: none;
+  background: url('../../image/iconMenu/magnifying_Theme_Glass_Of_Course.png') no-repeat var(--black);
+  box-shadow: -0px -0px 10px 0px var(--white),
+  5px 5px 10px 0px var(--black);
+  color: var(--white);
+}
+.ipnSearchPokemon.dark::placeholder{
+    color: var(--white);
+}
+.cardPokemon.dark{
+  background: var(--black);
+}
+.sideBarAbout{
+  position: fixed;
+  height: 100%;
+  border: solid var(--black);
+  background: var(--white);
+  z-index: 1;
+}
+/*width: clamp(300px, 50vw, 16%);*/

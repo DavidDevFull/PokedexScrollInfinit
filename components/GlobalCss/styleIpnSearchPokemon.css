@@ -1,14 +1,42 @@
 .ipnSearchPokemon {
-  background-image: url("../../image/iconMenu/magnifying_Theme_Glass_Dark.png");
-  background-repeat: no-repeat;
+  background: url("../../image/iconMenu/magnifying_Theme_Glass_Dark.png")
+  no-repeat var(--white_Sum_Of_Course);
   padding-left: 2.7rem;
   width: 90%;
-  /*width: clamp(350px, 80vw, 1600px);*/
   height: 50px;
   border-radius: 1.7rem;
+  border: transparent;
   outline: none;
-  font-size: clamp(.9rem, 1vw, 2rem);
+  font-size: clamp(0.9rem, 1vw, 2rem);
 }
-.ipnSearchPokemon::placeholder{
-    color: var(--black);
+.ipnSearchPokemon::placeholder {
+  color: var(--black);
+}
+.ipnSearchPokemon:focus {
+  animation: linear 3s animationOfReplaceColor infinite;
+}
+.ipnSearchPokemon.dark,
+.ipnSearchPokemon::placeholder.dark {
+  background: url("../../image/iconMenu/magnifying_Theme_Glass_Of_Course.png")
+    no-repeat var(--black);
+  color: var(--white);
+}
+@keyframes animationOfReplaceColor {
+  0%,
+  100% {
+    box-shadow: 0px 0px 10px 0px var(--colorTypeFire);
+    border: solid 2px var(--colorTypeFire);
+  }
+  25% {
+    box-shadow: 0px 0px 10px 0px var(--colorTypeWater);
+    border: solid 2px var(--colorTypeWater);
+  }
+  50% {
+    box-shadow: 0px 0px 10px 0px var(--colorTypeGram);
+    border: solid 2px var(--colorTypeGram);
+  }
+  75% {
+    box-shadow: 0px 0px 10px 0px var(--colorTypePoison);
+    border: solid 2px var(--colorTypePoison);
+  }
 }

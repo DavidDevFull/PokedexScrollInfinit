@@ -48,7 +48,7 @@ const pokemon = {
 
 console.log(pokemon);
 
-export const funcSumAboutPokemon = async (inserirInTag) => {
+export const funcSumAboutPokemon = async (insertInTag) => {
   const description = await fetchPokemonDescription(pokemon.id);
 
   const sumAboutPokemon = document.createElement("section");
@@ -75,5 +75,5 @@ export const funcSumAboutPokemon = async (inserirInTag) => {
     </div>
   `;
 
-  inserirInTag.appendChild(sumAboutPokemon);
+  insertInTag.appendChild(sumAboutPokemon);
 };

@@ -48,9 +48,9 @@ export const funcCardPokemon = (InsertTagIn, data) => {
 
   const { name, id, img, types } = data;
 
-  const mainType = types[0];
-  const colorMain = typeColorMap[mainType];
-  const iconMain = typeImgMap[mainType];
+  const firstType = types[0];
+  const colorMain = typeColorMap[firstType];
+  const iconMain = typeImgMap[firstType];
 
   const secondType = types[1];
   const secondColor = secondType ? typeColorMap[secondType] : "";
@@ -73,7 +73,7 @@ export const funcCardPokemon = (InsertTagIn, data) => {
     <div class="infoTypeIconPokemon">
       <div>${iconsHTML}</div>
       <div>
-        <span class="type1">${mainType}</span>
+        <span class="type1">${firstType}</span>
         ${secondType ? ` / <span class="type2">${secondType}</span>` : ""}
       </div>
     </div>

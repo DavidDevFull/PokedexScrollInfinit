@@ -1,0 +1,43 @@
+.asideBodyMenuScroll {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  padding-top: 0.8rem;
+  top: 0;
+}
+.asideBodyMenuScroll button, .asideBodyMenuScroll label{
+  border-radius: 1.7rem;
+  width: 53px;
+  height: 53px;
+  background: var(--white_Sum_Of_Course);
+  border: solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+.asideBodyMenuScroll img {
+  width: 37px;
+}
+.asideBodyMenuScroll button:hover, .asideBodyMenuScroll label:hover {
+  transition: all 0.2s;
+  left: 0;
+  box-shadow: -0px -0px 15px 0px var(--white_Sum_Of_Course);
+  scale: 1.1;
+}
+.lblTypes input {
+  display: none;
+}
+.btnCallInputSearch.dark, .btnOpenOrClosedMenu.dark,.btnReplacementTheme.dark,.btnFavoritePokemon.dark, .lblTypes.dark{
+  background: var(--black_Sum_Of_Course);
+  border: solid 2px var(--black) ;
+  transition: .5s;
+}
+.btnCallInputSearch.dark:hover, .btnOpenOrClosedMenu.dark:hover,.btnReplacementTheme.dark:hover,.btnFavoritePokemon.dark:hover, .lblTypes.dark:hover{
+  box-shadow: -0px 8px 15px 0px var(--black);
+}
